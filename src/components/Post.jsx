@@ -1,15 +1,12 @@
+import { Comment } from "./Comments";
 import styles from "./Post.module.css";
-
+import { Avatar } from "./Avatar";
 function Post() {
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img
-            className={styles.avatar}
-            src="https://github.com/jeh212.png"
-            alt=""
-          />
+          <Avatar src="https://github.com/jeh212.png" />
           <div className={styles.authorInfo}>
             <strong>Jean Carlos</strong>
             <span>Web Developer</span>
@@ -38,6 +35,11 @@ function Post() {
           <button type="submit">Publicar</button>
         </footer>
       </form>
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   );
 }
